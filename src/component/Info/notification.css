@@ -1,0 +1,202 @@
+.p-notif-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.3);
+  backdrop-filter: blur(10px);
+  z-index: 10000;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.p-notif-panel {
+  width: 400px;
+  height: 100vh;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  box-shadow: -15px 0 40px rgba(0, 0, 0, 0.1);
+  animation: slidePanel 0.4s ease-out;
+}
+
+.p-notif-panel.close {
+  animation: closePanel 0.4s ease-out;
+}
+
+.p-notif-header {
+  padding: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.p-notif-icon-bg {
+  width: 42px;
+  height: 42px;
+  background: #eff6ff;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+}
+
+.p-notif-title-area h2 {
+  font-size: 1.1rem;
+  font-weight: 800;
+  margin: 0;
+  color: #0f172a;
+}
+
+.p-notif-title-area p {
+  font-size: 0.8rem;
+  color: #64748b;
+  margin: 0;
+}
+
+.p-notif-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+  background: #fcfdfe;
+}
+
+.p-notif-card {
+  display: flex;
+  background: white;
+  border-radius: 16px;
+  margin-bottom: 15px;
+  border: 1px solid #f1f5f9;
+  overflow: hidden;
+}
+
+.p-notif-status-bar {
+  width: 5px;
+}
+.p-notif-status-bar.confirmed {
+  background: #10b981;
+}
+.p-notif-status-bar.cancelled {
+  background: #ef4444;
+}
+.p-notif-status-bar.pending {
+  background: #f59e0b;
+}
+
+.p-notif-card-body {
+  padding: 15px;
+  flex: 1;
+}
+
+.p-notif-card-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.p-notif-card-header h4 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.p-notif-time-tag {
+  font-size: 0.7rem;
+  color: #94a3b8;
+}
+.p-notif-desc {
+  font-size: 0.8rem;
+  color: #64748b;
+  margin: 0;
+}
+
+.p-badge {
+  font-size: 0.65rem;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-weight: 700;
+}
+.p-badge.confirmed {
+  background: #dcfce7;
+  color: #166534;
+}
+.p-badge.cancelled {
+  background: #fee2e2;
+  color: #991b1b;
+}
+.p-badge.pending {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.p-notif-footer-panel {
+  padding: 20px;
+  border-top: 1px solid #f1f5f9;
+  text-align: center;
+}
+
+.p-clear-all {
+  background: none;
+  border: none;
+  color: #3b82f6;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+@keyframes slidePanel {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes closePanel {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+.p-empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  text-align: center;
+  color: #94a3b8; /* لون رمادي مزرق هادئ */
+  height: 100%; /* ليأخذ مساحة اللوحة بالكامل */
+}
+
+.p-empty-icon {
+  font-size: 64px;
+  margin-bottom: 15px;
+  filter: grayscale(1);
+  opacity: 0.3;
+  transition: transform 0.3s ease;
+}
+
+.p-empty-state:hover .p-empty-icon {
+  transform: scale(1.1) rotate(5deg); /* حركة تفاعلية خفيفة */
+  opacity: 0.5;
+}
+
+.p-empty-state h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #475569;
+  margin-bottom: 8px;
+}
+
+.p-empty-state p {
+  font-size: 0.9rem;
+  max-width: 250px;
+  line-height: 1.5;
+}
+
+.p-notif-list:has(.p-empty-state) {
+  background: radial-gradient(circle at center, #ebf0f5 0%, #ffffff 100%);
+}

@@ -1,0 +1,372 @@
+.section {
+    min-height: 100vh;
+    margin: 25px 35px;
+}
+.head {
+    height: 60px;
+}
+.head h1 {
+  color: #0f1729;
+  font-size: 26px;
+  font-weight: 700;
+}
+.head p {
+  color: #6B7280;
+  font-size: 16px;
+  font-weight: 400;
+}
+.carts-appointments {
+    height: 110px;
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+.cart-appointments {
+    width: 23%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    background-color: #FCFCFD;
+    justify-content: center;
+    transition: .3s ease-in-out all;
+}
+.cart-appointments:hover {
+    scale: 1.03;
+}
+.cart-appointments p {
+    color: #6B7280;
+    font-size: 14px;
+    font-weight: 400;
+}
+.cart-appointments h1 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 4px;
+}
+.filtre-appointments {
+    height:70px;
+    padding:16px ;
+    display: flex;
+    gap: 15px;
+    margin-top: 28px;
+    background-color: #FDFDFE;
+    border: 1px solid #6b72801f;
+}
+
+.appointment {
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+.appointments table .appointment {
+    display: table-row !important;
+}
+.appointments table .appointment > td {
+    display: table-cell !important;
+    width: auto;
+}
+
+.appointments table {
+    table-layout: auto;
+    width: 100%;      
+    min-width: 700px; 
+}
+.appointments thead th,
+.appointments tbody td {
+    vertical-align: middle;
+    white-space: normal;
+}
+.appointments tbody tr {
+    width: 100%;
+}
+.appointments tbody td {
+    word-break: break-word;
+}
+
+.edite-btn {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    color: #94a3b8;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    opacity: 0; 
+    visibility: hidden;
+}
+
+.appointment:hover .edite-btn {
+    opacity: 1;
+    visibility: visible;
+}
+
+.edite-btn:hover {
+    background-color: #f1f5f9;
+    color: #1e293b;
+}
+
+.edite {
+    position: relative;
+    display: inline-block;
+}
+
+.edite-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 8px;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    min-width: 180px;
+    overflow: hidden;
+    padding: 6px;
+}
+
+.edite-item {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #475569;
+    text-align: left;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.edite-item:hover {
+    background-color: #f8fafc;
+    color: #2563eb;
+}
+
+.hidden {
+    display: none;
+}
+
+
+@media (max-width: 1024px) {
+    .section {
+        margin: 20px 15px !important;
+    }
+
+    .carts-appointments {
+        display: flex;
+        flex-wrap: wrap;
+        height: auto !important;
+        gap: 12px;
+    }
+
+    .cart-appointments {
+        width: 48% !important; 
+        padding: 15px !important;
+    }
+
+    .filtre-appointments {
+        display: flex !important;
+        flex-direction: row !important; 
+        height: auto !important;
+        padding: 10px !important;
+        gap: 8px !important;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .filtre-appointments > * {
+        flex: 1; 
+        min-width: 120px;
+    }
+
+    .filtre-appointments select,
+    .filtre-appointments button,
+    .filtre-appointments div[class*="select"], 
+    .filtre-appointments .filter-item {
+        font-size: 12px !important;
+        padding: 6px 8px !important;
+        height: 38px !important;
+    }
+
+    div.w-full.mt-3 {
+        overflow-x: auto !important;
+        display: block;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .appointments table {
+        min-width: 900px !important; 
+    }
+
+    .edite-btn {
+        opacity: 1 !important;
+        visibility: visible !important;
+        background-color: #f8fafc;
+        border: 1px solid #6b72801a;
+    }
+}
+
+@media (max-width: 640px) {
+    .cart-appointments {
+        width: 100% !important; 
+    }
+
+    .head h1 { font-size: 20px; }
+    .head p { font-size: 13px; }
+    
+    .filtre-appointments {
+        padding: 8px !important;
+    }
+}
+
+
+.filtre-appointments select,
+.filtre-appointments ul,
+.filtre-appointments [class*="menu"],
+.filtre-appointments [class*="list"] {
+    font-size: 13px !important; 
+    max-height: 250px !important; 
+    min-width: 120px !important; 
+}
+
+.appointments td:nth-child(2), 
+.appointments th:nth-child(2) {
+    white-space: nowrap !important; 
+    min-width: 160px !important; 
+}
+
+.appointments td.price, 
+.appointments th:nth-child(5) {
+    white-space: nowrap !important;
+    min-width: 100px !important; 
+}
+
+@media (max-width: 1024px) {
+    .appointments table {
+        min-width: 1000px !important; 
+    }
+}
+
+.status div {
+    white-space: nowrap !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: fit-content !important;
+    padding: 4px 12px !important;
+}
+
+
+
+
+
+@media (max-width: 1024px) {
+    .filtre-appointments .flex.items-center.gap-4.p-4 {
+        padding: 0 !important;
+        gap: 8px !important;
+    }
+
+    .filtre-appointments .relative.inline-block.w-52 {
+        width: 145px !important;
+    }
+
+    .filtre-appointments select {
+        padding-top: 8px !important;
+        padding-bottom: 8px !important;
+        padding-left: 30px !important; 
+        padding-right: 25px !important;
+        font-size: 12px !important;
+        height: 38px !important;
+        border-radius: 10px !important;
+    }
+
+    .filtre-appointments .absolute.left-3\.5 {
+        left: 8px !important;
+        top: 50% !important;
+        transform: translateY(-50%) scale(0.8) !important;
+    }
+
+    .filtre-appointments .absolute.right-4 {
+        right: 8px !important;
+        top: 50% !important;
+        transform: translateY(-50%) scale(0.8) !important;
+    }
+}
+
+.appointments table {
+    min-width: 1050px !important;
+}
+
+.appointments td, 
+.appointments th {
+    white-space: nowrap !important;
+}
+.filtre-appointments {
+    display: flex !important;
+    flex-direction: row !important; 
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    background: #fff;
+    border: 1px solid #f1f5f9;
+    height: auto !important;
+    padding: 8px !important;
+}
+
+.filter-container {
+    display: flex;
+    align-items: center;
+}
+
+.filter-relative {
+    position: relative;
+    width: 150px; 
+}
+
+.filter-select {
+    width: 100%;
+    height: 38px; 
+    padding: 0 30px 0 12px; 
+    font-size: 13px !important;
+    font-weight: 600;
+    color: #475569;
+    background-color: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    appearance: none;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.filter-select:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.appointments-list-container {
+    overflow-x: auto !important; 
+}
+
+.appointments table {
+    min-width: 1000px !important; 
+    border-collapse: collapse;
+}
+
+.appointments td, 
+.appointments th {
+    white-space: nowrap !important; 
+    padding: 12px 15px !important;
+}
+
+.price-col, .service-col {
+    width: auto !important;
+    min-width: 120px;
+}

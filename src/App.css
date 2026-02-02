@@ -1,0 +1,53 @@
+/* .nav-side {
+  display: flex;
+}
+
+.nav-info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex: 1;
+
+  margin-left: 260px;
+
+  transition: margin-left 0.3s ease;
+  min-height: 100vh;
+
+  padding-top: 70px;
+}
+
+.nav-side .sidebar.hid + .nav-info {
+  margin-left: 70px;
+}
+
+.nav-side .sidebar + .nav-info {
+  margin-left: 260px;
+} */
+.nav-side {
+  display: flex;
+}
+
+.nav-info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex: 1;
+  /* الحالة الافتراضية للجوال: لا يوجد انزياح */
+  margin-left: 0; 
+  transition: margin-left 0.3s ease;
+  min-height: 100vh;
+  padding-top: 70px;
+}
+
+/* لا تقم بتعديل هذه الكلاسات هنا، سنضعها داخل الـ Media Query في الأسفل */
+
+/* الشاشات الكبيرة (أكبر من 1024px) */
+@media (min-width: 1024px) {
+  .nav-side .sidebar + .nav-info {
+    margin-left: 260px;
+  }
+
+  .nav-side .sidebar.hid + .nav-info {
+    margin-left: 70px;
+  }
+}

@@ -1,0 +1,326 @@
+body {
+  background-color: #f6f7f9;
+  height: 100vh;
+}
+
+.welcome {
+  margin: 25px 35px;
+  height: 64px;
+}
+.welcome h1 {
+  color: #0f1729;
+  font-size: 32px;
+  font-weight: 700;
+}
+.welcome p {
+  color: #7d729f;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.carts {
+  height: 200px;
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  padding: 30px 0;
+}
+
+.card {
+  width: 22%;
+  background-color: #fbfbfc;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 22px;
+  border-radius: 14px;
+  transition: 0.5s all;
+}
+
+.card:hover {
+  background-color: rgba(197, 218, 250, 0.158);
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.card-info h4 {
+  color: #6b7280;
+  font-size: 15px;
+  font-weight: 500;
+}
+.card-info h1 {
+  font-size: 30px;
+  font-weight: 700;
+}
+.card-info p {
+  color: #16a249;
+  font-size: 13.5px;
+  font-weight: 500;
+}
+
+.icn-calen {
+  background: linear-gradient(130deg, #1b6de0, #10bfeb);
+  width: 45px;
+  height: 45px;
+  padding: 11px;
+  border-radius: 10px;
+  color: white;
+  font-size: 20px;
+  top: 5px;
+  position: relative;
+}
+
+.info-body-head {
+  background-color: #f6f7f9;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 30px;
+}
+.info-body-head h1 {
+  font-size: 20px;
+  font-weight: 500;
+  color: #0f1729;
+}
+.category-status {
+  display: flex;
+  gap: 15px;
+}
+.category-status button {
+  padding: 8px 15px;
+  border-radius: 10px;
+  color: #6b7280;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.5s all;
+  font-size: 14px;
+}
+.category-status button:hover {
+  color: black;
+}
+
+.category-status button.all {
+  background-color: #2462e8;
+  color: white;
+}
+.category-status button.pending {
+  background-color: #2462e8;
+  color: white;
+}
+.category-status button.confirmed {
+  background-color: #2462e8;
+  color: white;
+}
+.category-status button.cancelled {
+  background-color: #2462e8;
+  color: white;
+}
+.appointments-dashboard {
+  background-color: #f6f7f9;
+  margin: 25px 35px;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  min-height: 200px;
+  gap: 8px;
+}
+.name {
+  display: flex;
+  flex-direction: column;
+  width: 130px;
+}
+.name-logo {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.appointment-dashboard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 25px;
+  padding-left: 25px;
+  background-color: #ffffff;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.062);
+}
+
+.name-logo h1 {
+  width: 40px;
+  height: 40px;
+  background-color: #d0ecfa;
+  text-align: center;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #3469eb;
+  font-weight: 500;
+}
+
+.name h2 {
+  font-weight: 500;
+  color: #0f1729;
+}
+
+.name h3 {
+  font-size: 15px;
+  color: #6b7280;
+  position: relative;
+  top: -2px;
+}
+
+.info-appionetment {
+  display: flex;
+  align-items: center;
+  color: #6b7280;
+  gap: 10px;
+}
+.phone {
+  font-size: 14px;
+}
+.time {
+  font-size: 14px;
+}
+
+.status span {
+  border-radius: 15px;
+  font-size: 12px;
+  padding: 6px 8px;
+  font-weight: 500;
+}
+
+.price h1 {
+  width: 50px;
+}
+
+.confirmed {
+  color: #16a263;
+  background-color: #e7f5ec;
+}
+.pending {
+  color: #f7aa0a;
+  background-color: #fdf5e6;
+}
+.cancelled {
+  color: #ef4859;
+  background-color: #fdecec;
+}
+
+.edite {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.edite-btn {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: transparent;
+  color: #6b7280;
+  border: none;
+  cursor: pointer;
+  transition: .2s all;
+  opacity: 0;
+  visibility: hidden;  
+}
+.appointment-dashboard:hover .edite-btn{
+  opacity: 1;
+  visibility: visible;
+}
+.edite-btn:hover {
+  color: #0f1729;
+}
+
+.edite-menu {
+  position: absolute;
+  top: 34px;
+  right: 0;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 160px;
+  background: #FFFFFF;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+  z-index: 10;
+}
+
+.edite-item {
+  padding: 8px 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #0f1729;
+  text-align: left;
+  background: transparent;
+  cursor: pointer;
+}
+.edite-item:hover {
+  color: #1b6de0;
+}
+
+
+@media (max-width: 1024px) {
+  .carts {
+    display: flex;
+    flex-direction: column; 
+    height: auto !important; 
+    padding: 20px !important;
+    gap: 15px;
+  }
+
+  .card {
+    width: 100% !important; 
+    height: 120px !important; 
+  }
+
+  .welcome h1 {
+    font-size: 24px;
+  }
+
+  .appointments-dashboard {
+    overflow-x: auto;
+    margin: 15px !important;
+    padding: 10px !important;
+  }
+
+  .appointment-dashboard {
+    min-width: 750px; 
+  }
+
+  .info-body-head {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    gap: 15px;
+    margin: 0 15px;
+  }
+
+  .category-status {
+    width: 100%;
+    overflow-x: auto; 
+    padding-bottom: 5px;
+  }
+}
+
+@media (max-width: 768px) {
+  .edite-btn {
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+}
+
+

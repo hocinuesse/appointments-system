@@ -1,0 +1,104 @@
+ .topservices {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 18px;
+}
+.ts-head h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #0f1729;
+}
+.ts-head p {
+  margin: 2px 0 14px;
+  color: #6b7280;
+  font-size: 12px;
+  font-weight: 500;
+}
+.ts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.ts-row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.ts-row-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.ts-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.ts-rank {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: #6b7280;
+  background: #eef2f7;
+}
+.ts-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #0f1729;
+}
+.ts-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+.ts-amount {
+  font-size: 14px;
+  font-weight: 600;
+  color: #0f1729;
+}
+.ts-book {
+  font-size: 12px;
+  color: #6b7280;
+  font-weight: 600;
+}
+.ts-progress {
+  position: relative;
+  height: 8px;
+  border-radius: 999px;
+}
+.ts-track {
+  position: absolute;
+  inset: 0;
+  background: #f1f5f9;
+  border-radius: 999px;
+}
+.ts-bar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 999px;
+}
+.bar-blue {
+  background: linear-gradient(90deg, #00b8ff, #2563eb);
+}
+.bar-teal {
+  background: linear-gradient(90deg, #22d3ee, #10b981);
+}
+.bar-green-orange {
+  background: linear-gradient(90deg, #10b981, #f59e0b);
+}
+.bar-purple {
+  background: linear-gradient(90deg, #a855f7, #ec4899);
+}
+.bar-pink {
+  background: linear-gradient(90deg, #ec4899, #d946ef);
+}
