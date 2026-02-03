@@ -16,6 +16,8 @@ import Clients from "./component/clients/Clients";
 import Reports from "./component/reports/Reports";
 import { browserSessionPersistence, setPersistence } from "firebase/auth";
 import { auth } from "./firebase";
+import { useLocation } from "react-router-dom";
+import AOS from "aos";
 
 function App() {
   const status = useNotificationsStore((state) => state.Modul);
@@ -26,11 +28,16 @@ function App() {
   const initAuth = useAuthStore((state) => state.initAuth);
   const user = useAuthStore((state) => state.user);
   const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const radar = initAuth();
     return () => radar();
   }, [initAuth]);
+
+  useEffect(() => {
+    AOS.refresh();
+  }, [location]);
 
   useEffect(() => {
     setPersistence(auth, browserSessionPersistence).catch((e) =>

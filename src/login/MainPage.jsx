@@ -117,26 +117,26 @@ const MainPage = () => {
       </nav>
 
       {/* --- 2. Hero Section --- */}
-      <section className="pt-24 sm:pt-28 pb-20 px-6 relative overflow-hidden text-center">
+      <section className="pt-24 sm:pt-28 pb-20 px-6 relative overflow-hidden text-center" data-aos="fade-down">
         <div className="absolute top-20 left-1/2 -translate-x-1/2 w-full max-w-200 h-100 bg-blue-100/50 blur-[120px] -z-10 rounded-full"></div>
 
-        <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-blue-50 border border-blue-100 text-[#0081ff] text-[10px] sm:text-xs font-bold mb-10 uppercase tracking-widest mx-auto">
+        <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-blue-50 border border-blue-100 text-[#0081ff] text-[10px] sm:text-xs font-bold mb-10 uppercase tracking-widest mx-auto" data-aos="zoom-in" data-aos-delay="50">
           <HiCheckCircle /> Trusted by 10,000+ businesses worldwide
         </div>
 
-        <h1 className="text-4xl sm:text-7xl md:text-8xl font-black text-[#1a1a1a] leading-none tracking-tighter mb-10 font-['Playfair_Display']">
+        <h1 className="text-4xl sm:text-7xl md:text-8xl font-black text-[#1a1a1a] leading-[1] tracking-tighter mb-10 font-['Playfair_Display']" data-aos="fade-up" data-aos-delay="100">
           The Future of <br className="hidden sm:block" />
           <span className="font-['Plus_Jakarta_Sans'] italic bg-linear-to-r from-[#0061ff] via-[#60efff] to-[#00dbde] bg-clip-text text-transparent px-2">
             Business Management
           </span>
         </h1>
 
-        <p className="max-w-2xl mx-auto text-base sm:text-xl text-slate-500 font-medium leading-relaxed mb-12 opacity-90">
+        <p className="max-w-2xl mx-auto text-base sm:text-xl text-slate-500 font-medium leading-relaxed mb-12 opacity-90" data-aos="fade-up" data-aos-delay="150">
           Nexus empowers modern businesses with intelligent scheduling, deep
           analytics, and seamless client management.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-4 sm:px-0">
+        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-4 sm:px-0" data-aos="fade-up" data-aos-delay="200">
           <Link
             to="/signup"
             className="w-full sm:w-auto bg-linear-to-r from-blue-600 to-cyan-500 text-white px-6 py-3 sm:px-10 sm:py-4 rounded-xl text-base sm:text-lg font-bold shadow-xl shadow-blue-100 flex items-center justify-center gap-2 transition-transform active:scale-95"
@@ -150,7 +150,7 @@ const MainPage = () => {
       </section>
 
       {/* --- 3. Stats Section --- */}
-      <section className="max-w-7xl mx-auto px-6 py-10">
+      <section className="max-w-7xl mx-auto px-6 py-10" data-aos="fade-up">
         <div className="flex flex-wrap justify-center gap-4 sm:gap-8 text-[11px] sm:text-sm font-bold text-emerald-500 mb-10 text-center">
           <span className="flex items-center gap-1">
             <HiCheckCircle size={18} /> 14-day free trial
@@ -170,10 +170,7 @@ const MainPage = () => {
             { label: "Appointments", val: "N/A" },
             { label: "Satisfaction", val: "N/A%" },
           ].map((stat, i) => (
-            <div
-              key={i}
-              className="bg-white p-6 sm:p-8 rounded-2xl shadow-sm text-left"
-            >
+            <div key={i} className="bg-white p-6 sm:p-8 rounded-2xl shadow-sm text-left" data-aos="zoom-in" data-aos-delay={i * 100}>
               <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-2">
                 {stat.label}
               </p>
@@ -187,7 +184,7 @@ const MainPage = () => {
       </section>
 
       {/* --- 4. Features Section --- */}
-      <section id="features" className="max-w-7xl mx-auto px-6 py-24">
+      <section id="features" className="max-w-7xl mx-auto px-6 py-24" data-aos="fade-up">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-5xl font-extrabold mb-4">
             Everything you need to <span className="text-blue-500">scale</span>
@@ -214,10 +211,7 @@ const MainPage = () => {
               desc: "Real-time dashboards and growth strategies.",
             },
           ].map((f, i) => (
-            <div
-              key={i}
-              className="bg-white p-10 rounded-2xl border border-slate-50 shadow-sm hover:shadow-md transition-all group text-left"
-            >
+            <div key={i} className="bg-white p-10 rounded-2xl border border-slate-50 shadow-sm hover:shadow-md transition-all group text-left" data-aos="fade-up" data-aos-delay={i * 100}>
               <div className="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
                 {f.icon}
               </div>
@@ -231,7 +225,7 @@ const MainPage = () => {
       </section>
 
       {/* --- 5. Testimonials --- */}
-      <section id="testimonials" className="py-24 bg-slate-50 px-6 text-center">
+      <section id="testimonials" className="py-24 bg-slate-50 px-6 text-center" data-aos="fade-up">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl sm:text-5xl font-extrabold mb-4">
             Loved by
@@ -263,7 +257,7 @@ const MainPage = () => {
       </section>
 
       {/* --- 6. Pricing Section (Original Layout) --- */}
-      <section id="pricing" className="py-32 px-6">
+      <section id="pricing" className="py-32 px-6" data-aos="fade-up">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <PricingCard
@@ -287,7 +281,7 @@ const MainPage = () => {
       </section>
 
       {/* --- 7. CTA Section --- */}
-      <section className="px-6 py-12">
+      <section className="px-6 py-12" data-aos="fade-up">
         <div className="max-w-6xl mx-auto bg-linear-to-br from-blue-600 to-cyan-500 rounded-[2.5rem] p-8 sm:p-16 text-center text-white">
           <h2 className="text-3xl sm:text-5xl font-extrabold mb-6">
             Ready to transform your business?
@@ -322,7 +316,7 @@ const MainPage = () => {
 
 // Reusable Components to keep code clean as per World-Class Project criteria
 const TestimonialCard = ({ name, role, text, color }) => (
-  <div className="bg-white p-10 rounded-2xl shadow-sm border border-slate-50">
+  <div className="bg-white p-10 rounded-2xl shadow-sm border border-slate-50" data-aos="fade-up">
     <div className="flex text-amber-400 mb-6">★★★★★</div>
     <p className="text-slate-700 font-medium mb-8 leading-relaxed italic">
       "{text}"

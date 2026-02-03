@@ -51,7 +51,7 @@ const SignUp = () => {
 
   return (
     <div className="h-screen w-full flex bg-white font-['Plus_Jakarta_Sans',sans-serif] antialiased overflow-hidden">
-      <div className="hidden md:flex! md:w-1/2 md:order-1! relative bg-[#0a192f] p-12 flex-col justify-between overflow-hidden">
+      <div className="hidden md:flex! md:w-1/2 md:order-1! relative bg-[#0a192f] p-12 flex-col justify-between overflow-hidden" data-aos="fade-right">
         <div className="absolute top-[-10%] left-[-10%] w-[70%] h-[70%] bg-blue-600/20 blur-[100px] rounded-full"></div>
         <div className="absolute bottom-[-5%] right-[-5%] w-[50%] h-[50%] bg-cyan-500/10 blur-[80px] rounded-full"></div>
 
@@ -88,7 +88,7 @@ const SignUp = () => {
       </div>
 
       {/* --- الجهة اليمنى: نموذج التسجيل (مرن ليناسب الشاشة) --- */}
-      <div className="w-full md:w-1/2 md:order-2 flex items-center justify-center p-6 md:p-12 relative overflow-y-auto md:overflow-hidden">
+      <div className="w-full md:w-1/2 md:order-2 flex items-center justify-center p-6 md:p-12 relative overflow-y-auto md:overflow-hidden" data-aos="fade-left">
         <div className="absolute top-5 left-8 flex items-center gap-2 text-slate-400 hover:text-blue-600 font-bold text-xs cursor-pointer transition-colors">
           <Link
             to={"/"}

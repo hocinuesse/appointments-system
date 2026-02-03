@@ -15,8 +15,8 @@ const NotificationPanel = () => {
   const [close, setclose] = useState(false);
 
   return (
-    <div className="p-notif-overlay">
-      <div className={`p-notif-panel ${close ? "close" : ""}`}>
+    <div className="p-notif-overlay" data-aos="fade">
+      <div className={`p-notif-panel ${close ? "close" : ""}`} data-aos="fade-left" data-aos-delay="60">
         {/* Header */}
         <div className="p-notif-header">
           <div className="p-notif-title-area">

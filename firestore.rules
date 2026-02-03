@@ -1,0 +1,47 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function isSignedIn() {
+      return request.auth != null;
+    }
+    function isOwnerByPath(uid) {
+      return isSignedIn() && request.auth.uid == uid;
+    }
+    function isOwnerByField() {
+      return isSignedIn() && request.resource.data.uid == request.auth.uid;
+    }
+    function resourceOwner() {
+      return isSignedIn() && resource.data.uid == request.auth.uid;
+    }
+
+    // Users: كل مستخدم يمكنه إنشاء/قراءة/تعديل/حذف وثيقته فقط
+    match /users/{userId} {
+      allow create: if isOwnerByPath(userId) && isOwnerByField();
+      allow read: if isOwnerByPath(userId);
+      allow update, delete: if isOwnerByPath(userId);
+    }
+
+    // Clients: يقرأ ويكتب المالك فقط، مع منع تغيير المالك أثناء التحديث
+    match /clients/{clientId} {
+      allow read: if resourceOwner();
+      allow create: if isOwnerByField();
+      allow update: if resourceOwner()
+                    && request.resource.data.uid == resource.data.uid;
+      allow delete: if resourceOwner();
+    }
+
+    // Appointments (appoinetments): نفس منطق المالك، مع تثبيت uid في التحديث
+    match /appoinetments/{appointmentId} {
+      allow read: if resourceOwner();
+      allow create: if isOwnerByField();
+      allow update: if resourceOwner()
+                    && request.resource.data.uid == resource.data.uid;
+      allow delete: if resourceOwner();
+    }
+
+    // حظر أي وصول لباقي المسارات
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

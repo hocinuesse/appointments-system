@@ -82,14 +82,14 @@ const InfoSection = () => {
 
   return (
     <>
-      <div className="info">
-        <div className="info-head">
-          <div className="welcome">
+      <div className="info" data-aos="fade-up">
+        <div className="info-head" data-aos="fade-up">
+          <div className="welcome" data-aos="fade-right">
             <h1>Welcome back, {user.displayName} 👋</h1>
             <p>Here's your activity summary for today</p>
           </div>
           <div className="carts">
-            <div className="card shadow-lg ">
+            <div className="card shadow-lg " data-aos="zoom-in" data-aos-delay="0">
               <div className="card-info">
                 <h4>Total Appointments</h4>
                 <h1> {data?.length || 0} </h1>
@@ -97,7 +97,7 @@ const InfoSection = () => {
               </div>
               <LuCalendar className="icn-calen" />
             </div>
-            <div className="card shadow-lg">
+            <div className="card shadow-lg" data-aos="zoom-in" data-aos-delay="100">
               <div className="card-info">
                 <h4>Confirmed</h4>
                 <h1>{confirmeLength?.length || 0}</h1>
@@ -107,7 +107,7 @@ const InfoSection = () => {
               </div>
               <FaArrowTrendUp className="icn-calen" />
             </div>
-            <div className="card shadow-lg ">
+            <div className="card shadow-lg " data-aos="zoom-in" data-aos-delay="200">
               <div className="card-info">
                 <h4>Clients</h4>
                 <h1>{clients?.length || 0}</h1>
@@ -115,7 +115,7 @@ const InfoSection = () => {
               </div>
               <GoPeople className="icn-calen" />
             </div>
-            <div className="card shadow-lg">
+            <div className="card shadow-lg" data-aos="zoom-in" data-aos-delay="300">
               <div className="card-info">
                 <h4>Revenue</h4>
                 <h1>${total ? total : 0}</h1>
@@ -125,7 +125,7 @@ const InfoSection = () => {
             </div>
           </div>
         </div>
-        <div className="info-body">
+        <div className="info-body" data-aos="fade-up">
           <div className="info-body-head">
             <h1>Upcoming Appointments</h1>
             <div className="category-status">

@@ -62,8 +62,8 @@ const Modul = () => {
   ];
 
   return (
-    <div className="fixed inset-0 bg-black/40 backdrop-blur-md z-9999 flex items-center justify-center p-4">
-      <div className="bg-white w-full max-w-lg rounded-3xl shadow-2xl overflow-hidden transform transition-all max-h-[95vh] overflow-y-auto">
+    <div className="fixed inset-0 bg-black/40 backdrop-blur-md z-9999 flex items-center justify-center p-4" data-aos="fade">
+      <div className="bg-white w-full max-w-lg rounded-3xl shadow-2xl overflow-hidden transform transition-all max-h-[95vh] overflow-y-auto" data-aos="zoom-in" data-aos-delay="80">
         <div className="bg-blue-600 p-4 text-white text-center">
           <h2 className="text-xl font-bold">Add New Appointment</h2>
           <p className="text-blue-100 text-xs">

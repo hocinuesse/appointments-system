@@ -63,12 +63,12 @@ const AppointmentsList = () => {
 
   return (
     <>
-      <div className="filtre-appointments rounded-xl">
+      <div className="filtre-appointments rounded-xl" data-aos="fade-up">
         <FiltreStatus onSelect={(status) => setStatus(status)} />
         <FiltreService onSelect={(service) => setService(service)} />
       </div>
 
-      <div className="w-full mt-3 bg-white rounded-2xl shadow-sm border border-slate-100">
+      <div className="w-full mt-3 bg-white rounded-2xl shadow-sm border border-slate-100" data-aos="fade-up">
         <table className="w-full text-left border-collapse">
           <thead>
             <tr className="bg-slate-50/50 border-b border-slate-100">
@@ -93,10 +93,12 @@ const AppointmentsList = () => {
 
           <tbody className="divide-y divide-slate-100 w-full tbody min-h-50 ">
             {sortData && sortData.length > 0 ? (
-              sortData.map((doc) => (
+              sortData.map((doc, i) => (
                 <tr
                   key={doc.id}
                   className="appointment hover:bg-slate-50/80 transition-all group w-full"
+                  data-aos="fade-up"
+                  data-aos-delay={i * 60}
                 >
                   {/* Column 1: Client Info */}
                   <td className="px-6 py-4">

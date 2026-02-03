@@ -94,12 +94,12 @@ const Navbar = () => {
       </div>
 
       {isLogoutModalOpen && (
-        <div className="fixed inset-0 z-2000 flex items-center justify-center p-4">
+        <div className="fixed inset-0 z-2000 flex items-center justify-center p-4" data-aos="fade">
           <div
             className="absolute inset-0 bg-slate-900/60 backdrop-blur-sm"
             onClick={() => setIsLogoutModalOpen(false)}
           ></div>
-          <div className="relative bg-white w-full max-w-sm rounded-3xl p-8 shadow-2xl animate-modal-scale text-center">
+          <div className="relative bg-white w-full max-w-sm rounded-3xl p-8 shadow-2xl text-center" data-aos="zoom-in" data-aos-delay="60">
             <h3 className="text-2xl font-bold text-slate-800 mb-3">Sign Out</h3>
             <p className="text-slate-500 mb-8">
               Are you sure you want to log out?

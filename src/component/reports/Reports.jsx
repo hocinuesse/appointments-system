@@ -44,14 +44,14 @@ const Reports = () => {
   }, [Appointments, total, getAvgOrderValue]);
 
   return (
-    <div className="reports section">
-      <div className="reports-head head">
+    <div className="reports section" data-aos="fade-up">
+      <div className="reports-head head" data-aos="fade-up">
         <h1>Reports & Analytics</h1>
         <p>Track your business performance and insights</p>
       </div>
 
       <div className="reports-carts">
-        <div className="cart-reports shadow-lg rounded-xl">
+        <div className="cart-reports shadow-lg rounded-xl" data-aos="zoom-in" data-aos-delay="0">
           <div className="cart-head-reports">
             <p>Total Revenue</p>
             <FaDollarSign className="cart-icn text-green-600" />
@@ -63,7 +63,7 @@ const Reports = () => {
           </h3>
         </div>
 
-        <div className="cart-reports shadow-lg rounded-xl">
+        <div className="cart-reports shadow-lg rounded-xl" data-aos="zoom-in" data-aos-delay="100">
           <div className="cart-head-reports">
             <p>Appointments</p>
             <LuCalendar className="cart-icn text-blue-600" />
@@ -75,7 +75,7 @@ const Reports = () => {
           </h3>
         </div>
 
-        <div className="cart-reports shadow-lg rounded-xl">
+        <div className="cart-reports shadow-lg rounded-xl" data-aos="zoom-in" data-aos-delay="200">
           <div className="cart-head-reports">
             <p>Total Clients</p>
             <GoPeople className="cart-icn text-cyan-400" />
@@ -87,7 +87,7 @@ const Reports = () => {
           </h3>
         </div>
 
-        <div className="cart-reports shadow-lg rounded-xl">
+        <div className="cart-reports shadow-lg rounded-xl" data-aos="zoom-in" data-aos-delay="300">
           <div className="cart-head-reports">
             <p>Avg. Order Value</p>
             <LuChartColumn className="cart-icn text-orange-400" />
@@ -100,20 +100,20 @@ const Reports = () => {
         </div>
       </div>
 
-      <div className="charts-reports">
-        <div className="chart-report">
+      <div className="charts-reports" data-aos="fade-up">
+        <div className="chart-report" data-aos="fade-up" data-aos-delay="100">
           <Charts />
         </div>
-        <div className="chart-report">
+        <div className="chart-report" data-aos="fade-up" data-aos-delay="200">
           <Chart2 />
         </div>
       </div>
 
-      <div className="Service-reports">
-        <div className="service-report breakdown w-[34%] ">
+      <div className="Service-reports" data-aos="fade-up">
+        <div className="service-report breakdown w-[34%] " data-aos="fade-right">
           <ServiceBreakdown />
         </div>
-        <div className="service-report top-services w-[64%] ">
+        <div className="service-report top-services w-[64%] " data-aos="fade-left">
           <TopServices />
         </div>
       </div>
