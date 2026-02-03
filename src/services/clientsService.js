@@ -53,6 +53,7 @@ export const clientsService = {
         number: info.number,
         uid: user.uid,
         joinedAt: now,
+        lastVisit: now,
         totalSpent: Number(info.price),
         appointments: [{ ...info, createdAt: now }],
         adedBy: user.displayName,

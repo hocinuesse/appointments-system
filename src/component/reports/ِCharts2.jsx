@@ -42,7 +42,7 @@ const Chart2 = () => {
 
       {/* الحاوية التي تحتضن الرسم يجب أن تأخذ flex-1 وتملك min-height */}
       <div className="flex-1 w-full min-h-55">
-        <ResponsiveContainer width="100%" height="100%">
+        <ResponsiveContainer width="100%" height="100%" debounce={400}>
           <BarChart
             data={data}
             margin={{ left: -25, right: 5, top: 10, bottom: 0 }}
@@ -66,10 +66,29 @@ const Chart2 = () => {
               tick={{ fill: "#64748b", fontSize: 10 }}
               allowDecimals={false}
             />
-            <Tooltip cursor={{ fill: "#f8fafc" }} />
-            <Bar dataKey="confirmed" fill="#16a34a" radius={[2, 2, 0, 0]} />
-            <Bar dataKey="pending" fill="#f59e0b" radius={[2, 2, 0, 0]} />
-            <Bar dataKey="cancelled" fill="#ef4444" radius={[2, 2, 0, 0]} />
+            <Tooltip cursor={{ fill: "#f8fafc" }} isAnimationActive={false} />
+            {/* عدل الـ Bar components بهذا الشكل */}
+            <Bar
+              dataKey="confirmed"
+              fill="#16a34a"
+              radius={[2, 2, 0, 0]}
+              animationBegin={600}
+              animationDuration={1200}
+            />
+            <Bar
+              dataKey="pending"
+              fill="#f59e0b"
+              radius={[2, 2, 0, 0]}
+              animationBegin={800} // تأخير إضافي قليلاً للأعمدة التالية
+              animationDuration={1200}
+            />
+            <Bar
+              dataKey="cancelled"
+              fill="#ef4444"
+              radius={[2, 2, 0, 0]}
+              animationBegin={1000}
+              animationDuration={1200}
+            />
           </BarChart>
         </ResponsiveContainer>
       </div>

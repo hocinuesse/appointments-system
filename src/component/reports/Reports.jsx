@@ -110,10 +110,10 @@ const Reports = () => {
       </div>
 
       <div className="Service-reports">
-        <div className="service-report breakdown">
+        <div className="service-report breakdown w-[34%] ">
           <ServiceBreakdown />
         </div>
-        <div className="service-report top-services">
+        <div className="service-report top-services w-[64%] ">
           <TopServices />
         </div>
       </div>

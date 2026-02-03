@@ -63,7 +63,7 @@ const Charts = () => {
         </div>
       </div>
 
-      <ResponsiveContainer width="100%" height="80%">
+      <ResponsiveContainer width="100%" height="80%" debounce={500}>
         <AreaChart
           data={dataForChart}
           margin={{ top: 10, right: 10, left: -20, bottom: 0 }}
@@ -109,13 +109,15 @@ const Charts = () => {
           />
 
           <Area
-            type="monotone" 
+            type="monotone"
             dataKey="revenue"
             stroke="#2563eb"
             strokeWidth={4}
             fillOpacity={1}
             fill="url(#colorRev)"
-            animationDuration={1500}
+            isAnimationActive={true}
+            animationBegin={800} // تأخير كافٍ لإنهاء حركة الـ Sidebar
+            animationDuration={1200}
           />
         </AreaChart>
       </ResponsiveContainer>
