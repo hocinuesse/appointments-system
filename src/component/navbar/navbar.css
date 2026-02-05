@@ -75,6 +75,11 @@
   transition: 0.3 all;
 }
 
+.icn-add {
+  font-size: 20px;
+  font-weight: 900;
+}
+
 @media (max-width: 1024px) {
   .navbar {
     left: 0 !important;

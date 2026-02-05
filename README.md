@@ -1,20 +1,79 @@
-<<<<<<< HEAD
-# React + Vite
+# Nexus Dashboard — Appointments, Clients, and Reports Management
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A professional system for managing appointments and clients with reports and analytics, built with React and Vite. Integrates Firebase (Auth + Firestore), uses Zustand for state management, and AOS for polished animations.
 
-Currently, two official plugins are available:
+## Key Features
+- Appointments: add/confirm/cancel with instant notification logging
+- Clients: create/update and link appointments with total spending tracking
+- Reports & Analytics: total revenue, appointments count, clients count, average order value
+- Notification Panel: structured, interactive system events
+- Modern responsive UI: CSS/Tailwind-like styling + precise AOS animations
+- Security: Firestore rules enforce owner-only data access
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech Stack
+- UI: React 19 + Vite 7
+- Routing: React Router
+- State: Zustand
+- Animations: AOS
+- Data: Firebase Auth + Firestore
+- Code Quality: ESLint (React Hooks + Refresh configs)
 
-## React Compiler
+## Project Structure (high-level)
+- Global animation setup in the main entry files (App and main)
+- Data access via dedicated services (appointments, clients, analytics)
+- State management with centralized stores
+- Firebase configured via environment variables (no secrets committed)
+- Firestore security rules stored alongside project configuration
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Quick Start
+Requirements:
+- Node.js 18+
+- Firebase project (Web)
 
-## Expanding the ESLint configuration
+Install and run:
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+2. Development server:
+   ```bash
+   npm run dev
+   ```
+3. Production build:
+   ```bash
+   npm run build
+   ```
+4. Preview:
+   ```bash
+   npm run preview
+   ```
+5. Lint:
+   ```bash
+   npm run lint
+   ```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-=======
-# apointments-System
->>>>>>> 554dcdf770e74f71fd0978da728b21926b3a6cda
+## Firebase Setup
+- Create a `.env` file in project root with your Firebase credentials.
+- Use environment variables (e.g., `VITE_*`) and do not commit `.env`.
+- The app reads environment values at build time; never expose secrets in README.
+
+## Security
+- Firestore rules enforce owner-only access for all data.
+- Always include the authenticated user identifier in created documents.
+- Keep sensitive details (paths, keys, and user-specific info) out of documentation.
+
+## UI Highlights
+- Dashboard, Appointments, Reports, Services, Navigation, and Auth pages are organized into feature-based components.
+
+## Animations & Transitions
+- AOS used with staggered delays for clean visual hierarchy
+- CSS transitions rely on `transform` with `transition: transform 0.3s ease-in-out` for smooth scaling
+- Modals/panels use `fade` and `zoom-in` effects for open/close interactions
+
+## Quality & Production Notes
+- Keep code quality via `npm run lint`
+- Do not commit secrets; use `.env`
+- Consider caching/virtualization for large lists
+
+## License
+Private project — for practical and educational use. Redistribution requires permission.

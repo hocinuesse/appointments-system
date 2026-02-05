@@ -34,7 +34,7 @@ body {
   justify-content: space-between;
   padding: 22px;
   border-radius: 14px;
-  transition: 0.5s all;
+    transition: .3s ease-in-out all;
 }
 
 .card:hover {

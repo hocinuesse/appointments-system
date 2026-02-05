@@ -1,0 +1,69 @@
+.service-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.service-head button {
+  background-color: #2462e8;
+  width: 140px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  gap: 8px;
+  color: #f3f6fc;
+  font-size: 16px;
+  border-radius: 13px;
+  cursor: pointer;
+  transition: 0.3 all;
+}
+.service-carts {
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.cart-service {
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  background-color: #fcfcfd;
+  justify-content: center;
+  transition: transform 0.3s ease-in-out;
+}
+.cart-service:hover {
+  transform: scale(1.03);
+}
+
+.cart-head-service p {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.cart-service h1 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 4px;
+}
+
+.cart-head-service {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart-icn {
+  font-size: 20px;
+}
+
+.cart-service h3, .cart-service h3 span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.cart-service h3 {
+  margin-top: 7px;
+  font-size: 14px;
+}

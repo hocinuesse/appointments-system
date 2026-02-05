@@ -41,7 +41,8 @@
   font-size: 20px;
 }
 
-.cart-reports h3, .cart-reports h3 span {
+.cart-reports h3,
+.cart-reports h3 span {
   display: flex;
   align-items: center;
   gap: 5px;
@@ -78,15 +79,17 @@
 
 @media (max-width: 1024px) {
   .reports-carts {
-    grid-template-columns: repeat(2, 1fr); 
+    grid-template-columns: repeat(2, 1fr);
   }
-  
-  .charts-reports, .Service-reports {
+
+  .charts-reports,
+  .Service-reports {
     flex-direction: column;
     height: auto;
   }
 
-  .chart-report, .service-report {
+  .chart-report,
+  .service-report {
     width: 100% !important;
     min-height: 350px;
     margin-bottom: 20px;
@@ -95,6 +98,6 @@
 
 @media (max-width: 640px) {
   .reports-carts {
-    grid-template-columns: 1fr; 
+    grid-template-columns: 1fr;
   }
 }

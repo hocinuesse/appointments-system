@@ -18,6 +18,7 @@ import { browserSessionPersistence, setPersistence } from "firebase/auth";
 import { auth } from "./firebase";
 import { useLocation } from "react-router-dom";
 import AOS from "aos";
+import Service from "./component/servicees/Service";
 
 function App() {
   const status = useNotificationsStore((state) => state.Modul);
@@ -97,6 +98,14 @@ function App() {
                 element={
                   <>
                     <Reports /> {status && <Modul />}
+                  </>
+                }
+              />
+              <Route
+                path="/services"
+                element={
+                  <>
+                    <Service /> {status && <Modul />}
                   </>
                 }
               />
