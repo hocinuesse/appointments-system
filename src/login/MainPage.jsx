@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import "./test.css";
 import { HiArrowRight, HiCheckCircle, HiMenu, HiX } from "react-icons/hi";
 import {
   HiOutlineCalendar,
@@ -21,6 +22,30 @@ const MainPage = () => {
 
   return (
     <>
+      {/* for testing */}
+      <div class="demo-account-card">
+        <div class="card-header">
+          <span class="pulse-icon"></span>
+          <h3>Fast testing (Nexus)</h3>
+        </div>
+
+        <div class="account-details">
+          <div class="detail-item" onclick="copyToClipboard('demo@nexus.com')">
+            <label>Email</label>
+            <div class="value-box">
+              <span>test@gmail.com</span>
+            </div>
+          </div>
+
+          <div class="detail-item" onclick="copyToClipboard('123456')">
+            <label>Password</label>
+            <div class="value-box">
+              <span>testmyproject</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div className="warning">Under development</div>
       <div className="min-h-screen bg-white text-[#1a1a1a] font-['Plus_Jakarta_Sans'] antialiased">
         {/* --- 1. Navbar --- */}
@@ -37,7 +62,7 @@ const MainPage = () => {
             </div>
 
             {/* Desktop Links - تظهر من md فأكبر */}
-            <div className="hidden md:!flex gap-10 font-medium text-slate-500 text-sm">
+            <div className="hidden md:flex! gap-10 font-medium text-slate-500 text-sm">
               <a
                 href="#features"
                 className="hover:text-blue-600 transition-colors"
@@ -60,7 +85,7 @@ const MainPage = () => {
 
             {/* Desktop Auth & Mobile Toggle */}
             <div className="flex items-center gap-6">
-              <div className="hidden md:!flex items-center gap-6">
+              <div className="hidden md:flex! items-center gap-6">
                 <Link
                   to="/login"
                   className="text-sm font-bold text-slate-700 hover:text-blue-600 transition-colors"
@@ -68,7 +93,7 @@ const MainPage = () => {
                   Sign In
                 </Link>
                 <Link
-                  to="/signup"
+                  // to="/signup"
                   className="bg-linear-to-r from-blue-600 to-cyan-500 text-white px-6 py-2.5 rounded-full text-sm font-bold flex items-center gap-2 shadow-lg shadow-blue-200"
                 >
                   Get Started <HiArrowRight />
@@ -108,7 +133,7 @@ const MainPage = () => {
                   Sign In
                 </Link>
                 <Link
-                  to="/signup"
+                  // to="/signup"
                   className="bg-[#0081ff] text-white py-4 rounded-xl text-center font-bold"
                 >
                   Get Started
@@ -159,7 +184,7 @@ const MainPage = () => {
             data-aos-delay="200"
           >
             <Link
-              to="/signup"
+              // to="/signup"
               className="w-full sm:w-auto bg-linear-to-r from-blue-600 to-cyan-500 text-white px-6 py-3 sm:px-10 sm:py-4 rounded-xl text-base sm:text-lg font-bold shadow-xl shadow-blue-100 flex items-center justify-center gap-2 transition-transform active:scale-95"
             >
               Start Free Trial <HiArrowRight />
