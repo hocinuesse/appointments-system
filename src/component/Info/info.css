@@ -280,6 +280,7 @@ body {
     height: auto !important; 
     padding: 20px !important;
     gap: 15px;
+    margin-top: 35px;
   }
 
   .card {

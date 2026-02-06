@@ -53,7 +53,7 @@ const Navbar = () => {
       >
         <div
           className={`search-bar flex items-center transition-all flex-1 lg:flex-none
-          ml-14 lg:ml-0  /* ترك مساحة لزر الهمبرغر في الجوال */
+          ml-14 lg:ml-0 
         `}
         >
           <CiSearch className="icn-search shrink-0" />
@@ -63,6 +63,9 @@ const Navbar = () => {
             placeholder="Search..."
             onChange={(e) => searchAppointments(e.target.value)}
           />
+        </div>
+        <div className="warning">
+            Under development
         </div>
 
         <div className="Add-btn flex items-center gap-2 lg:gap-5 shrink-0">

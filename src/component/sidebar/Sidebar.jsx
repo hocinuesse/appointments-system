@@ -23,7 +23,7 @@ const Sidebar = () => {
         onClick={toggle}
         className={`fixed top-4 left-4 z-999 p-2 bg-[#0F1729] text-white rounded-lg lg:hidden transition-opacity duration-300 ${!sidestatus ? "opacity-0 pointer-events-none" : "opacity-100"}`}
       >
-        <IoMenuOutline size={28} />
+        <IoMenuOutline size={20} />
       </button>
 
       {!sidestatus && (
